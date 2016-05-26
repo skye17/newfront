@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="panel">
+            <div class="panel-body">
+        <div class="col col-lg-12 centered">
+<form action="" method="post">
+    {% csrf_token %}
+    <h3>Are you sure you want to delete algorithm <b>{{ object.name }}</b>?</h3>
+    <input type="submit" value="Confirm" class="btn btn-danger" role="button"/>
+</form>
+        </div>
+                </div>
+            </div>
+        </div>
+</div>
+<br>
+{% endblock main-content %}

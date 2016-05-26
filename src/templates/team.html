@@ -1,0 +1,193 @@
+{% extends "index.html" %}
+{% block main-content %}
+{% load staticfiles %}
+
+<div class="team">
+<div class="container" >
+	<div class="row">
+		<h2 style="text-align: center;padding-bottom: 10px;">Meet the team:</h2>
+		<div class="col col-lg-6">
+
+  <div class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+			  	<img src="{% static 'algotesting/assets/img/brains_green.png' %}" height="100" style="padding-right: 10px">
+			  <span style="font-size: 18px;"><b>Brand New Team</b></span>
+		  </a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+				<table class="table table-striped">
+				<tr>
+					<td><img src="{% static 'algotesting/assets/img/br1.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/br2.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/br3.png' %}" width="75"></td>
+				</tr>
+				<tr>
+					<td>Першаков Николай</td>
+					<td>Подкин Алексей</td>
+					<td>Матушкин Александр</td>
+				</tr>
+				</table>
+			<table class="table table-striped">
+					<tr><td>Applying deep learning to the financial instruments</td></tr>
+					<tr><td>Using modern methods of deep learning to build the optimal trading strategies</td></tr>
+					<tr><td>Creating new algorithms</td></tr>
+					<tr><td>Testing our strategy on real data</td></tr>
+					</table>
+
+		</div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+			  <img src="{% static 'algotesting/assets/img/graph_green.png' %}" height="100" style="padding-right: 20px">
+			  <span style="font-size: 18px;"><b>Research Team</b></span>
+		  </a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+			<table class="table table-striped">
+				<tr>
+					<td><img src="{% static 'algotesting/assets/img/r1.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/r2.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/r3.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/r4.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/r5.png' %}" width="75"></td>
+				</tr>
+				<tr>
+					<td>Алексеев Федор</td>
+					<td>Персиянов Дмитрий</td>
+					<td>Грицай Артем</td>
+					<td>Медведева Анна</td>
+					<td>Иванов Илья</td>
+				</tr>
+				</table>
+			<table class="table table-striped">
+<tr><td>Applying deep learning to the financial instruments</td></tr>
+<tr><td>Investigating articles with new algorithms</td></tr>
+<tr><td>Implementing the most promising algorithms</td></tr>
+<tr><td>Improving algorithms using machine learning techniques</td></tr>
+				</table>
+		</div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+			  <img src="{% static 'algotesting/assets/img/dev_green.png' %}" height="100" style="padding-right: 20px">
+			  <span style="font-size: 18px;"><b>Framework Team</b></span>
+		  </a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+			<table class="table table-striped">
+				<tr>
+					<td><img src="{% static 'algotesting/assets/img/f1.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/f2.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/f3.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/f4.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/f5.png' %}" width="75"></td>
+				</tr>
+				<tr>
+					<td>Колмаков Сергей</td>
+					<td>Сухуроченков Артем</td>
+					<td>Сторожилова Елена</td>
+					<td>Капцан Арсений</td>
+					<td>Ермолаева Анастасия</td>
+				</tr>
+				</table>
+			<table class="table table-striped">
+<tr><td>Designing algorithms for api</td></tr>
+<tr><td>Creating local and on-line testing tools</td></tr>
+<tr><td>Helping to integrate algorithms in the testing system</td></tr>
+<tr><td>Creating a website showing information about the project</td></tr>
+				</table>
+		</div>
+      </div>
+    </div>
+</div></div>
+
+		<div class="col col-lg-6">
+			<div class="panel-group" id="accordion1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse4">
+			  <img src="{% static 'algotesting/assets/img/mentors.png' %}" height="100" style="padding-right: 20px">
+			  <span style="font-size: 18px;"><b>Mentors</b></span>
+		  </a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+			<table class="table table-striped">
+				<tr>
+					<td><img src="{% static 'algotesting/assets/img/m1.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/m2.png' %}" width="75"></td>
+
+				</tr>
+				<tr>
+					<td>Давлетшин Азат</td>
+					<td>Орлов Никита</td>
+				</tr>
+				<tr>
+					<td>Разработчик технологического департамента компании ABBYY (группа OCR)</td>
+					<td>Разработчик технологического департамента компании ABBYY (группа Image Analysis)</td>
+				</tr>
+				</table>
+		</div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse5">
+			  <img src="{% static 'algotesting/assets/img/mentors1.png' %}" height="100" style="padding-right: 20px">
+			  <span style="font-size: 18px;"><b>Scrum masters and product owners</b></span>
+		  </a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">
+						<table class="table table-striped">
+				<tr>
+					<td><img src="{% static 'algotesting/assets/img/sc1.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/sc2.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/sc3.png' %}" width="75"></td>
+					<td><img src="{% static 'algotesting/assets/img/sc4.png' %}" width="75"></td>
+				</tr>
+							<tr>
+					<td>Вяткина Анна</td>
+					<td>Ичалова Диана</td>
+					<td>Кочетов Николай</td>
+					<td>Контуров Дмитрий</td>
+				</tr>
+							</table>
+		</div>
+      </div>
+    </div>
+		</div>
+
+		</div>
+  </div>
+</div>
+
+	</div>
+
+
+{% endblock main-content%}

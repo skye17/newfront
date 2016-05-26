@@ -1,0 +1,94 @@
+{% extends "algotesting/form_base.html"%}
+{% block popoverscript %}
+<script>
+$(document).ready(function() {
+    $.get('{% url "algotesting:loading" %}', function(data){
+        $("#appendTo").append(data);
+    });
+
+    $('#gds_form').submit(function() {
+
+        $('#wait10').modal('show');
+
+    });
+
+});
+</script>
+
+<script type='text/javascript'>
+$(window).load(function(){
+    $('#algorithm').popover();
+    $('#data').popover();
+    $('#load').popover();
+    $('#save').popover();
+    $('#capital').popover();
+    $('#trainsize').popover();
+});
+
+
+$(document).ready(function() {
+
+    $('#algo-select').multiselect({
+        buttonWidth: '100%'
+    });
+    $('#datasets-select').val('{{ pk }}').prop('selected', true);
+
+    $('#datasets-select').multiselect({
+        buttonWidth: '100%'
+    });
+
+});
+
+</script>
+<div id="appendTo"></div>
+{% endblock popoverscript %}
+{% block label %}
+{% if field ==  form.load_parameters %}
+<label class="control-label">
+    <i class="fa fa-arrow-up fa-3x" id="load" data-toggle="popover" data-trigger="hover"
+      data-content="Load algorithm parameters from the train parameters file if it's specified"
+        data-placement="top"></i>
+</label>
+{% elif field == form.save_parameters %}
+<label class="control-label"><i class="fa fa-arrow-down fa-3x" id="save" data-toggle="popover" data-trigger="hover"
+       data-content="Save algorithm parameters to the train parameters file if it's specified"
+        data-placement="top"></i>
+</label>
+{% elif field == form.algorithm %}
+<label class="control-label">
+    <i class="fa fa-gears fa-3x" id="algorithm" data-toggle="popover" data-trigger="hover"
+       data-content="Algorithm"
+        data-placement="top"></i>
+</label>
+{% elif field == form.dataset %}
+<label class="control-label">
+    <i class="fa fa-table fa-3x" id="data" data-toggle="popover" data-trigger="hover"
+       data-content="Data"
+        data-placement="top"></i>
+</label>
+{% elif field == form.capital %}
+<label class="control-label">
+    <i class="fa fa-usd fa-3x" id="capital" data-toggle="popover" data-trigger="hover"
+       data-content="Base capital"
+        data-placement="top"></i>
+</label>
+{% elif field == form.train_size %}
+<label class="control-label">
+    <i class="fa fa-flask fa-3x" id="trainsize" data-toggle="popover" data-trigger="hover"
+       data-content="Train size"
+        data-placement="top"></i>
+</label>
+{% else %}
+<label class="control-label">{{ field.label_tag }}</label>
+{% endif %}
+{% endblock label %}
+{% block button %}
+    <div class="row">
+        <div class="col col-lg-12 centered">
+            <input id="submit2" type="submit" class = "btn btn-success" value="Test!"/>
+        </div>
+    </div>
+{% endblock button %}
+{% block additional %}
+
+{% endblock additional %}

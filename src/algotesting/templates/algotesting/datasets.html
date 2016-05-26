@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block main-content %}
+<div class="container">
+<div class="row" style="font-size: 16px">
+    <div class="col col-lg-10 col-lg-offset-1">
+
+    {% if datasets %}
+        <div class="panel panel-success">
+            <div class="panel-heading"><h4>Available datasets</h4></div>
+        <table class="table">
+            <tr>
+                <td>Name</td><td>Frequency</td><td>Features</td><td></td>
+            </tr>
+            {% for dataset in datasets %}
+                <tr>
+                    <td><a href="{% url 'algotesting:dataset_info' dataset.pk %}">{{ dataset.name }}</a></td>
+                    <td>{{ dataset.frequency }}</td>
+                    <td>{{ dataset.columns }}</td>
+                    <td>
+                        <a href="{% url 'algotesting:delete_dataset' dataset.pk %}">
+                            <i class="fa fa-trash-o"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+{% endif %}
+    </div>
+</div>
+    </div>
+{% endblock main-content %}

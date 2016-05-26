@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block main-content %}
+
+<div class="container">
+		<div class="row centered mt grid">
+			<h2>Available files</h2>
+			<div class="mt"></div>
+            <div class="col-lg-3"></div>
+			<div class="col-lg-3">
+                <a class="navbar-brand" href="{% url 'algotesting:datasets' %}"><i class="fa fa-table fa-4x"></i></a>
+                <h3>Datasets</h3>
+			</div>
+			<div class="col-lg-3">
+                <a class="navbar-brand" href="{% url 'algotesting:algorithms' %}"><i class="fa fa-cogs fa-4x"></i></a>
+                <h3>Algorithms</h3>
+			</div>
+            <div class="col-lg-3"></div>
+		</div>
+</div>
+{% endblock main-content%}

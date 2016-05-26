@@ -1,0 +1,45 @@
+{% extends "algotesting/base_upload.html" %}
+
+{% block fileinfo %}
+<div class="row">
+    <div class="col col-lg-6 col-lg-offset-3">
+    <div class="panel-group">
+         <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1"><h4>Algorithm instruction</h4></a>
+                </h3>
+            </div>
+        <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">
+            <div class="lead">
+        <h5><b>Algorithm</b> - user defined python source file which contains functions initialize, handle_data and optionally
+        functions load, save and analyze</h5>
+        <h5>
+            <b>Initialize</b> - function for learning
+        </h5>
+        <h5>
+            <b>Handle_data</b> - function for buying and selling and optionally for online learning
+        </h5>
+            <h5>
+                <b>Load</b> - function which defines the way algorithm training parameters are loaded. If not specified,
+                default function just pickles out result variable from train parameters file if it's uploaded
+            </h5>
+            <h5>
+                <b>Save</b> - function which defines the way algorithm training parameters are saved. If not specified,
+                default function pickles result to train parameters file if it's uploaded:
+            </h5>
+            <h5>
+                <b>Analyze</b> - function for depicting the results of testing algorithm. It should plot everything needed
+                and return figure object. Default function would plot graph of portfolio value
+                (run <a href="{% url 'algotesting:quick_start' %}">Quick Start</a> for an example)
+            </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock fileinfo %}

@@ -1,0 +1,36 @@
+{% extends "algotesting/form_base.html" %}
+{% block field %}
+    {% if field == form.algorithm %}
+        <div class="controls ">{{ field }}</div>
+        <a href="{% url 'algotesting:download_algo' object.pk %}">
+            <button type="button" class="btn btn-link">Download example algorithm</button>
+        </a>
+    {% else %}
+        <div class="controls ">{{ field }}</div>
+    {% endif %}
+{% endblock field %}
+
+{% block additional %}
+<script type="text/javascript">
+    $("#algo1").filestyle({
+        input: false,
+        buttonText : '  Choose algorithm',
+        buttonName: 'btn-default'
+    });
+    $("#param1").filestyle({
+        input: false,
+        buttonText : '  Choose train parameters',
+        buttonName: 'btn-default'
+    });
+    $("#data").filestyle({
+        input: false,
+        buttonText : '  Choose dataset',
+        buttonName: 'btn-default'
+    });
+</script>
+{% endblock additional %}
+
+{% block button %}
+<input type="submit" class = "btn btn-success" value="Add!"/>
+{% endblock button %}
+

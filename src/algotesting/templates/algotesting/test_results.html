@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+{% block main-content %}
+<script type="text/javascript">
+    $(function () {
+        ("#report").popover()
+   });
+ </script>
+
+<div class="container">
+<div class="row">
+
+    <div class="col col-lg-6">
+    <div class="panel-group">
+         <div class="panel">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse_params"><h4>Test parameters</h4></a>
+                </h5>
+            </div>
+        <div id="collapse_params" class="panel-collapse collapse">
+            <div class="panel-body" style="color:#000000">
+                {{ object.info|linebreaks }}
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    <div class="col col-lg-6">
+       <div class="panel-group">
+         <div class="panel">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse_results">
+                        <h4>Test results</h4>
+                    </a>
+                </h5>
+            </div>
+        <div id="collapse_results" class="panel-collapse collapse">
+            <div class="panel-body" style="color:#000000">
+                {{ object.test_results|linebreaks }}
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+    <br>
+<div class="row">
+    <div class="col col-lg-12 centered">
+        {% load static %}
+        <object data-toggle="popover" data-trigger="hover" data-content='Touch' id="#report" height="500" width="90%" type="application/pdf" data="{% get_media_prefix %}{{ object.results_path  }}"></object>
+    </div>
+
+</div>
+</div>
+    </div>
+
+{% endblock main-content %}

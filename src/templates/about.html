@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block main-content %}
+
+
+
+<div id="green">
+    <div class="container">
+			<div class="row">
+				<div class="col col-lg-3 col-lg-offset-2" >
+					<div><img src="{% static 'algotesting/assets/img/brain_logo.png' %}" alt="" style="display: inline-block"></div>
+                </div>
+                    <div class="col col-lg-7" style="text-align: center">
+                        <h3>About the project:</h3>
+					    <p>We explore Deep Learning application to the financial instruments</p>
+                        <p>We study and create new algorithms in the area</p>
+                        <p>We build a framework, in which all of this can be seen</p>
+                        </div>
+				</div>
+
+			</div>
+    </div>
+</div>
+
+<div class="container" style="padding-top: 20px">
+    <div class="row" style="text-align: center">
+        <div class="col col-lg-1"></div>
+        <div class="col col-lg-10">
+     <div class="panel panel-success">
+         <div class="panel-heading" style="background-color: #74cfae;">
+             <h3 style="color: white;font-weight: 400;">Comparison with existing frameworks</h3>
+         </div>
+
+        <div class="panel-body">
+            {% include "about_table.html" %}
+        </div>
+        </div>
+         </div>
+        <div class="col col-lg-1"></div>
+	</div>
+</div>
+
+{% endblock main-content %}

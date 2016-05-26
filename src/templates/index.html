@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontopolar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'algotesting/assets/css/bootstrap.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'algotesting/assets/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'algotesting/assets/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'algotesting/assets/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'algotesting/assets/css/bootstrap-multiselect.css' %}" rel="stylesheet">
+      <script src="{% static 'algotesting/assets/js/jquery-2.2.3.min.js' %}"></script>
+    <script src="{% static 'algotesting/assets/js/bootstrap-multiselect.js' %}"></script>
+    <script src="{% static 'algotesting/assets/js/chart.js' %}"></script>
+    <script src="{% static 'algotesting/assets/js/bootstrap-filestyle.min.js' %}"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <table>
+            <tr>
+              <td><a class="navbar-brand" href="{% url 'algotesting:index' %}"><i class="fa fa-home"></i></a></td>
+              <td><a class="navbar-brand" href="{% url 'algotesting:testing' %}"><i class="fa fa-rocket"></i></a></td>
+              <td><a class="navbar-brand" href="{% url 'algotesting:archive' %}"><i class="fa fa-archive"></i></a></td>
+              <td><a class="navbar-brand" href="{% url 'algotesting:add' %}"><i class="fa fa-upload"></i></a></td>
+            </tr>
+            <tr>
+              <td style="color:#555">Home</td>
+              <td style="color:#555">Test</td>
+              <td style="color:#555">Files</td>
+              <td style="color:#555">Upload</td>
+            </tr>
+          </table>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class = "active"><a href = "{% url 'algotesting:quick_start' %}">Quick Start</a></li>
+               <li><a href="{% url 'algotesting:about' %}">About</a></li>
+              <li><a href="{% url 'algotesting:team' %}">Team</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+   <div style="padding-top: 60px;padding-bottom: 20px;">
+    {% block main-content %}
+	<div id="hello">
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-lg-8 col-lg-offset-2 centered">
+	    			<h1>Frontopolar</h1>
+	    			<h2>Deep Learning Framework for Trading</h2>
+	    		</div><!-- /col-lg-8 -->
+	    	</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /hello -->
+
+    {% endblock main-content %}
+    </div>
+
+	<div id="f">
+		<div class="container">
+			<div class="row">
+				<p>Crafted with <i class="fa fa-heart"></i> by DIHT MIPT</p>
+			</div>
+		</div>
+	</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'algotesting/assets/js/bootstrap.js' %}"></script>
+  </body>
+</html>

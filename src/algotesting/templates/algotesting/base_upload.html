@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block main-content %}
+
+<div class="container">
+     {% block fileinfo %}
+    {% endblock fileinfo %}
+
+        {% include 'algotesting/fileupload_form.html' %}
+</div>
+<br>
+{% endblock main-content %}
